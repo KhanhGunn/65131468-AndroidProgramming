@@ -11,4 +11,5 @@ Nội dung bao gồm:
 
 Repository cũng được sử dụng để theo dõi quá trình học tập và phát triển kỹ năng lập trình Android.
 
-<img width="569" height="605" alt="image" src="https://github.com/user-attachments/assets/9f95096f-b818-43f4-9f07-668a4f36ef4a" />
+<img width="569" height="605" alt="image" src="https://github.com/user-attachments/assets/390eeca2-24e7-4b04-9169-bda08399e4e5" />
+
