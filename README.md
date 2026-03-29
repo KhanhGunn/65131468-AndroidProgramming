@@ -10,3 +10,4 @@ Nội dung bao gồm:
 - Project cuối kỳ phát triển ứng dụng Android
 
 Repository cũng được sử dụng để theo dõi quá trình học tập và phát triển kỹ năng lập trình Android.
+<img width="1163" height="677" alt="image" src="https://github.com/user-attachments/assets/9a424898-c1fc-4fe1-9eb5-4b02cd600aa3" />
