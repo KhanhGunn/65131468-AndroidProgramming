@@ -1,8 +1,11 @@
 package gun.edu.ontaplistview;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -48,6 +51,22 @@ public class MainActivity extends AppCompatActivity {
 
         // 3.2 Gán Adapter cho ListView
         lvTT.setAdapter(adapterTinhThanh);
-    }
 
+        // BẮT ĐẦU: Lắng nghe sự kiện Click trên Item [00:05:46]
+        lvTT.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                // position: chính là vị trí của phần tử vừa được nhấn [00:08:03]
+
+                // Cách 1: Hiện vị trí phần tử (Ví dụ của tác giả [00:13:04])
+                // Toast.makeText(MainActivity.this, "Bạn vừa chọn phần tử số: " + position, Toast.LENGTH_SHORT).show();
+
+                // Cách 2: Hiện tên giá trị (Ví dụ của tác giả [00:14:08])
+                String tenTinh = dsTenTinhThanh.get(position); // Lấy giá trị tại vị trí đó
+                Toast.makeText(MainActivity.this, "Bạn vừa chọn: " + tenTinh, Toast.LENGTH_SHORT).show();
+            }
+
+
+        });
+    }
 }
