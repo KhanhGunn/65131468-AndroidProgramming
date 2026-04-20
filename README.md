@@ -43,5 +43,4 @@ Chức năng 4: Thông tin cá nhân
 
 
 
-<img width="569" height="605" alt="image" src="https://github.com/user-attachments/assets/390eeca2-24e7-4b04-9169-bda08399e4e5" />
 
