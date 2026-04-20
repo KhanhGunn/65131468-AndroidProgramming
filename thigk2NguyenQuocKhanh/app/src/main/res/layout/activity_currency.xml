@@ -1,61 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:context=".CurrencyActivity">
 
     <TextView
+        android:id="@+id/tvTitleCurrency"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:text="Đổi tiền VND - USD"
         android:textSize="20sp"
-        android:layout_gravity="center"
-        android:layout_marginBottom="20dp"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/edtAmount"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:hint="Nhập số tiền"
-        android:inputType="numberDecimal" />
+        android:inputType="numberDecimal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitleCurrency" />
 
     <EditText
         android:id="@+id/edtRate"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
         android:hint="Tỉ giá (1 USD = ? VND)"
         android:inputType="numberDecimal"
-        android:text="25000" />
+        android:text="25000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtAmount" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <Button
+        android:id="@+id/btnVndToUsd"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:text="VND -> USD"
+        app:layout_constraintEnd_toStartOf="@+id/btnUsdToVnd"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtRate" />
 
-        <Button
-            android:id="@+id/btnVndToUsd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="VND -> USD" />
-
-        <Button
-            android:id="@+id/btnUsdToVnd"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="USD -> VND" />
-    </LinearLayout>
+    <Button
+        android:id="@+id/btnUsdToVnd"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="USD -> VND"
+        app:layout_constraintBottom_toBottomOf="@+id/btnVndToUsd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnVndToUsd"
+        app:layout_constraintTop_toTopOf="@+id/btnVndToUsd" />
 
     <TextView
         android:id="@+id/tvResult"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:text="Kết quả: "
+        android:textColor="#FF0000"
         android:textSize="18sp"
-        android:layout_marginTop="20dp"
-        android:textColor="#FF0000"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btnVndToUsd" />
 
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
