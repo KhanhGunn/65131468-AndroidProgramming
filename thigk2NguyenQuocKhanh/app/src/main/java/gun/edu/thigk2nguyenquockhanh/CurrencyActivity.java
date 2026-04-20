@@ -9,6 +9,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.Locale;
+
 public class CurrencyActivity extends AppCompatActivity {
 
     @Override
@@ -21,6 +23,7 @@ public class CurrencyActivity extends AppCompatActivity {
         Button btnVndToUsd = findViewById(R.id.btnVndToUsd);
         Button btnUsdToVnd = findViewById(R.id.btnUsdToVnd);
         TextView tvResult = findViewById(R.id.tvResult);
+        Button btnBack = findViewById(R.id.btnBack);
 
         btnVndToUsd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -31,7 +34,7 @@ public class CurrencyActivity extends AppCompatActivity {
                     double amount = Double.parseDouble(amountStr);
                     double rate = Double.parseDouble(rateStr);
                     double result = amount / rate;
-                    tvResult.setText(String.format("Kết quả: %.2f USD", result));
+                    tvResult.setText(String.format(Locale.getDefault(), "Kết quả: %.2f USD", result));
                 } else {
                     Toast.makeText(CurrencyActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
@@ -47,10 +50,17 @@ public class CurrencyActivity extends AppCompatActivity {
                     double amount = Double.parseDouble(amountStr);
                     double rate = Double.parseDouble(rateStr);
                     double result = amount * rate;
-                    tvResult.setText(String.format("Kết quả: %.0f VND", result));
+                    tvResult.setText(String.format(Locale.getDefault(), "Kết quả: %.0f VND", result));
                 } else {
                     Toast.makeText(CurrencyActivity.this, "Vui lòng nhập đầy đủ thông tin", Toast.LENGTH_SHORT).show();
                 }
+            }
+        });
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         });
     }

@@ -1,7 +1,9 @@
 package gun.edu.thigk2nguyenquockhanh;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,6 +18,7 @@ public class SongsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_songs);
 
         ListView lvSongs = findViewById(R.id.lvSongs);
+        Button btnBack = findViewById(R.id.btnBackSongs);
 
         ArrayList<String> songList = new ArrayList<>();
         songList.add("Tiến quân ca");
@@ -31,5 +34,12 @@ public class SongsActivity extends AppCompatActivity {
 
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, songList);
         lvSongs.setAdapter(adapter);
+
+        btnBack.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
     }
 }
