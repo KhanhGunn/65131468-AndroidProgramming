@@ -11,15 +11,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Thigk2NguyenQuocKhanh">
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".CurrencyActivity" android:label="Đổi tiền" />
+        <activity android:name=".SongsActivity" android:label="Ca khúc cách mạng" />
+        <activity android:name=".FiguresActivity" android:label="Danh nhân lịch sử" />
+        <activity android:name=".ProfileActivity" android:label="Thông tin cá nhân" />
+
     </application>
 
 </manifest>
